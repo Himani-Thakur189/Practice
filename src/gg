@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import './style.css'
+const ViewData = ({ Notes, delNotes }) => {
+
+    console.log('notes view data', Notes)
+    const [edit, onEdit] = React.useState(false)
+
+    const onEditNotes = (e, index) => {
+        console.log('event5', index)
+        Notes[index] = e.target.value
+        console.log('notes on edit', Notes)
+
+    }
+    return (
+        <table>
+            <caption style={{ fontSize: '30px', fontWeight: 700 }}>Notes</caption>
+            <tbody>
+                <tr>
+                    <th>Index</th>
+                    <th>Task</th>
+                </tr>
+                {Notes ? Notes.map((data, index) =>
+                    <tr key={index}>
+                        <td>{index}</td>
+                        <td>
+                            {!!edit ? <input type='text' value={data} onChange={(e) => onEditNotes(e, { index })}></input> : data}
+                            <button className='smallbtn' onClick={() => delNotes({ index })}>delete</button>
+                            {!!edit ? <button className='smallbtn'>Done</button> : <button className='smallbtn' onClick={() => onEdit(!edit)}>edit</button>}
+                        </td>
+                    </tr>) : null}
+            </tbody>
+        </table>
+    );
+}
+
+export default ViewData;

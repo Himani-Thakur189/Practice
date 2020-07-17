@@ -1,0 +1,27 @@
+table {
+  margin-top: 2%;
+  margin-left: 10%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+.smallbtn{
+  color: white;
+  background-color: #842b0b;
+  border: none;
+  margin-left: 12px;
+}

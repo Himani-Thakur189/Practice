@@ -1,0 +1,22 @@
+.btn {
+    color: white;
+    padding: 14px 46px 14px 46px;
+    background-color: #63220f;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    margin-left: 43%;
+    margin-top: 2%;
+}
+
+.input{
+    width: 51%;
+    border: 1px solid black;
+    height: 50px;
+    margin-left: 23%;
+}
+.error{
+    color:red;
+    font-size:19px;
+    margin-left: 42%;
+}
